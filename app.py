@@ -18,7 +18,7 @@ if not EXPECTED_BEARER_TOKEN:
     raise Exception("The ENV_BEARER environment variable is not set.")
 
 # Load the Whisper model when the server starts
-whisper_model = whisper.load_model("base")
+whisper_model = whisper.load_model("small")
 
 @app.post("/audio/transcriptions")
 async def transcribe_audio(
